@@ -24,5 +24,9 @@
             android:id="@+id/navigateToFragOne"
             app:destination="@+id/fragmentOne"
             app:enterAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="text"
+            app:argType="string"
+            android:defaultValue="text passed" />
     </fragment>
 </navigation>

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.navArgs
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -19,6 +20,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class FragmentTwo : Fragment() {
+
+    val args: FragmentTwoArgs by navArgs()
+
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -38,7 +42,9 @@ class FragmentTwo : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_two, container, false)
 
+        val str = args.text
         val textView2 = view.findViewById<TextView>(R.id.txt_vw2)
+        textView2.text = str
 
         textView2.setOnClickListener {
             Navigation.findNavController(view)

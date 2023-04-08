@@ -41,8 +41,10 @@ class FragmentOne : Fragment() {
         val textView1 = view.findViewById<TextView>(R.id.txt_vw1)
 
         textView1.setOnClickListener {
+            val action = FragmentOneDirections
+                .navigateToFragTwo("diff text passed")
             Navigation.findNavController(view)
-                .navigate(R.id.navigateToFragTwo)
+                .navigate(action)
         }
 
         return view
