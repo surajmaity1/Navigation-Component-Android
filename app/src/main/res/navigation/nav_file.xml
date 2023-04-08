@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_file"
+    app:startDestination="@id/fragmentOne">
+
+    <fragment
+        android:id="@+id/fragmentOne"
+        android:name="com.surajmyt.navigationcomponentandroid.FragmentOne"
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one">
+        <action
+            android:id="@+id/navigateToFragTwo"
+            app:destination="@id/fragmentTwo"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentTwo"
+        android:name="com.surajmyt.navigationcomponentandroid.FragmentTwo"
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two">
+        <action
+            android:id="@+id/navigateToFragOne"
+            app:destination="@+id/fragmentOne"
+            app:enterAnim="@android:anim/slide_out_right" />
+    </fragment>
+</navigation>
