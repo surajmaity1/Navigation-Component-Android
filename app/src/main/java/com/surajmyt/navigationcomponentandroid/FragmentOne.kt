@@ -42,7 +42,7 @@ class FragmentOne : Fragment() {
 
         textView1.setOnClickListener {
             val action = FragmentOneDirections
-                .navigateToFragTwo("diff text passed")
+                .navigateToFragTwo("Fragment Two")
             Navigation.findNavController(view)
                 .navigate(action)
         }
