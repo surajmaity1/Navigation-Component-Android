@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <group
-        android:checkableBehavior="single">
-        <item
-            android:id="@+id/fragmentOne"
-            android:title="@string/One"/>
-        <item
-            android:id="@+id/fragmentTwo"
-            android:title="@string/Two"/>
-    </group>
+    <item
+        android:id="@+id/dashboard_fragment"
+        android:icon="@drawable/dashboard"
+        android:title="@string/dashboard_txt"/>
+    <item
+        android:id="@+id/chat_fragment"
+        android:icon="@drawable/chat"
+        android:title="@string/chat_txt"/>
+    <item
+        android:id="@+id/premium_fragment"
+        android:icon="@drawable/premium"
+        android:title="@string/premium_txt"/>
+
 </menu>

@@ -10,43 +10,37 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
-    private lateinit var drawerLayout: DrawerLayout
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var bottomNavigationView: BottomNavigationView
     private lateinit var listener: NavController.OnDestinationChangedListener
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val navigationView = findViewById<NavigationView>(R.id.navigationView)
 
         navController = findNavController(R.id.fragment)
-        drawerLayout = findViewById(R.id.drawer_layout)
-        navigationView.setupWithNavController(navController)
+        bottomNavigationView = findViewById(R.id.btm_nav_view)
+        appBarConfiguration = AppBarConfiguration(setOf(R.id.dashboard_fragment, R.id.chat_fragment, R.id.premium_fragment))
 
-        appBarConfiguration = AppBarConfiguration(navController.graph, drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
+        bottomNavigationView.setupWithNavController(navController)
 
         listener = NavController.OnDestinationChangedListener { controller, destination, arguments ->
             when(destination.id) {
-                R.id.fragmentOne -> supportActionBar
-                    ?.setBackgroundDrawable(ColorDrawable(getColor(R.color.teal_200)))
-                R.id.fragmentTwo -> supportActionBar
-                    ?.setBackgroundDrawable(ColorDrawable(getColor(R.color.purple_500)))
+                R.id.dashboard_fragment -> supportActionBar
+                    ?.setBackgroundDrawable(ColorDrawable(getColor(R.color.dashboard_color)))
+                R.id.chat_fragment -> supportActionBar
+                    ?.setBackgroundDrawable(ColorDrawable(getColor(R.color.chat_color)))
+                R.id.premium_fragment -> supportActionBar
+                    ?.setBackgroundDrawable(ColorDrawable(getColor(R.color.premium_color)))
             }
         }
-
     }
-
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.fragment)
-        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
-    }
-
     override fun onResume() {
         super.onResume()
         navController.addOnDestinationChangedListener(listener)

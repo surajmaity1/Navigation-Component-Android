@@ -3,30 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_file"
-    app:startDestination="@id/fragmentOne">
+    app:startDestination="@id/dashboard_fragment">
 
     <fragment
-        android:id="@+id/fragmentOne"
+        android:id="@+id/dashboard_fragment"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentOne"
-        android:label="fragment_one"
+        android:label="DashBoard"
         tools:layout="@layout/fragment_one">
-        <action
-            android:id="@+id/navigateToFragTwo"
-            app:destination="@id/fragmentTwo"
-            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentTwo"
+        android:id="@+id/chat_fragment"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentTwo"
-        android:label="fragment_two"
+        android:label="Chat"
         tools:layout="@layout/fragment_two">
-        <action
-            android:id="@+id/navigateToFragOne"
-            app:destination="@+id/fragmentOne"
-            app:enterAnim="@android:anim/slide_out_right" />
-        <argument
-            android:name="text"
-            app:argType="string"
-            android:defaultValue="text passed" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/premium_fragment"
+        android:name="com.surajmyt.navigationcomponentandroid.FragmentThree"
+        android:label="Premium"
+        tools:layout="@layout/fragment_three">
     </fragment>
 </navigation>

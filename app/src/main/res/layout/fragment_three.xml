@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".FragmentThree"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FragmentTwo"
-    android:background="@color/chat_color">
+    android:background="@color/premium_color">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/chat_txt"
+        android:text="@string/premium_txt"
         android:textSize="38sp"
         android:textColor="@color/white"
         android:textStyle="bold"

@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
-import androidx.navigation.Navigation
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -36,18 +34,7 @@ class FragmentOne : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_one, container, false)
-
-        val textView1 = view.findViewById<TextView>(R.id.txt_vw1)
-
-        textView1.setOnClickListener {
-            val action = FragmentOneDirections
-                .navigateToFragTwo("Fragment Two")
-            Navigation.findNavController(view)
-                .navigate(action)
-        }
-
-        return view
+        return inflater.inflate(R.layout.fragment_one, container, false)
     }
 
     companion object {
