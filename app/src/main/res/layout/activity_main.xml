@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:id="@+id/drawer_layout"
     >
 
     <fragment
@@ -14,21 +13,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:defaultNavHost="true"
-        app:layout_constraintBottom_toTopOf="@id/btm_nav_view"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/nav_file"
-        />
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/btm_nav_view"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#93D3DC"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:menu="@menu/drawer_menu"
-        />
-
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/nav_file" />
 </androidx.constraintlayout.widget.ConstraintLayout>

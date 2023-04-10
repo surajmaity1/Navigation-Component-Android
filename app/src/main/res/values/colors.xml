@@ -10,4 +10,10 @@
     <color name="dashboard_color">#5360A6</color>
     <color name="chat_color">#C09554</color>
     <color name="premium_color">#264F4B</color>
+
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="blue">#7BCEFF</color>
 </resources>

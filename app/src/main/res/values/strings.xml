@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">Navigation Component Android</string>
-    <string name="dashboard_txt">DashBoard</string>
-    <string name="premium_txt">Premium</string>
-    <string name="chat_txt">Chat</string>
+    <string name="on_boarding_scrn1">OnBoarding 1</string>
+    <string name="on_boarding_scrn2">OnBoarding 2</string>
+    <string name="on_boarding_scrn3">OnBoarding 3</string>
+    <string name="food">FRESH FOOD</string>
+    <string name="delivery">FAST DELIVERY</string>
+    <string name="payment">EASY PAYMENT</string>
+
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
