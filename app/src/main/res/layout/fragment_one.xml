@@ -4,56 +4,32 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".FragmentOne">
+    tools:context=".FragmentOne"
+    android:background="@color/blue"
+    >
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/ic_food"
+    <TextView
+        android:id="@+id/frag1_txt_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fragment_one"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/title"
+    <Button
+        android:id="@+id/frag1_back_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
-        android:text="@string/food"
-        android:textSize="30sp"
-        android:textStyle="bold"
+        android:text="@string/back"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <TextView
-        android:id="@+id/description"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="50dp"
-        android:gravity="center"
-        android:text="@string/lorem"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/title" />
-
-    <TextView
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="40dp"
-        android:text="Next"
-        android:textColor="@color/blue"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/frag1_txt_view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

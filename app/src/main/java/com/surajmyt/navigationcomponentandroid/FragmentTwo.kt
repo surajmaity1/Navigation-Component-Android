@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.TextView
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import androidx.viewpager2.widget.ViewPager2
 
@@ -18,13 +20,12 @@ class FragmentTwo : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_two, container, false)
 
-        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+        val backBtn2 = view.findViewById<Button>(R.id.frag2_back_btn)
 
-        val nextButton2 = view.findViewById<TextView>(R.id.next2)
-
-        nextButton2.setOnClickListener {
-            viewPager?.currentItem = 2
+        backBtn2.setOnClickListener {
+            findNavController().navigate(R.id.action_fragTwo_to_dashboardFragment)
         }
+
         return view
     }
 

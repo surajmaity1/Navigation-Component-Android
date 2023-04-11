@@ -15,15 +15,6 @@ class SplashScreenFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        Handler().postDelayed({
-            if (onBoardingFinished()) {
-                findNavController().navigate(R.id.action_splashScreenFragment_to_dashBoardFragment)
-            }
-            else {
-                findNavController().navigate(R.id.action_splashScreenFragment_to_viewPagerFragment)
-            }
-        }, 2000)
-
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_splash_screen, container, false)
     }
