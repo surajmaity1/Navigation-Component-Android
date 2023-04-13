@@ -13,6 +13,8 @@ import androidx.viewpager2.widget.ViewPager2
 
 class FragmentTwo : Fragment() {
 
+    private val args by navArgs<FragmentTwoArgs>()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -20,12 +22,8 @@ class FragmentTwo : Fragment() {
         // Inflate the layout for this fragment
         val view =  inflater.inflate(R.layout.fragment_two, container, false)
 
-        val backBtn2 = view.findViewById<Button>(R.id.frag2_back_btn)
-
-        backBtn2.setOnClickListener {
-            findNavController().navigate(R.id.action_fragTwo_to_dashboardFragment)
-        }
-
+        val textView = view.findViewById<TextView>(R.id.text)
+        textView.text = "FirstName: ${args.currentUser.firstName}\nLastName: ${args.currentUser.lastName}"
         return view
     }
 

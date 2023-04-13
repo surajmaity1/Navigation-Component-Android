@@ -3,49 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_file"
-    app:startDestination="@id/dashboardFragment"
-    >
+    app:startDestination="@id/fragmentOne">
 
     <fragment
-        android:id="@+id/dashboardFragment"
-        android:name="com.surajmyt.navigationcomponentandroid.DashBoardFragment"
-        android:label="Home"
-        tools:layout="@layout/fragment_dash_board" >
-        <action
-            android:id="@+id/action_dashboardFragment_to_fragOne"
-            app:destination="@id/fragOne"
-            app:enterAnim="@anim/from_left"
-            app:exitAnim="@anim/to_right"
-            app:popEnterAnim="@anim/from_right"
-            app:popExitAnim="@anim/to_left"  />
-        <action
-            android:id="@+id/action_dashboardFragment_to_fragTwo"
-            app:destination="@id/fragTwo"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left"
-            app:popEnterAnim="@anim/from_left"
-            app:popExitAnim="@anim/to_right"  />
-    </fragment>
-    <fragment
-        android:id="@+id/fragOne"
+        android:id="@+id/fragmentOne"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentOne"
-        android:label="First Fragment"
-        tools:layout="@layout/fragment_one" >
+        android:label="fragment_one"
+        tools:layout="@layout/fragment_one">
         <action
-            android:id="@+id/action_fragOne_to_dashboardFragment"
-            app:destination="@id/dashboardFragment"
-            app:enterAnim="@anim/from_right"
-            app:exitAnim="@anim/to_left" />
+            android:id="@+id/navigateToFragTwo"
+            app:destination="@id/fragmentTwo"
+            app:enterAnim="@android:anim/slide_in_left" />
     </fragment>
     <fragment
-        android:id="@+id/fragTwo"
+        android:id="@+id/fragmentTwo"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentTwo"
-        android:label="Second Fragment"
-        tools:layout="@layout/fragment_two" >
+        android:label="fragment_two"
+        tools:layout="@layout/fragment_two">
         <action
-            android:id="@+id/action_fragTwo_to_dashboardFragment"
-            app:destination="@id/dashboardFragment"
-            app:enterAnim="@anim/from_left"
-            app:exitAnim="@anim/to_right"  />
+            android:id="@+id/navigateToFragOne"
+            app:destination="@+id/fragmentOne"
+            app:enterAnim="@android:anim/slide_out_right" />
+        <argument
+            android:name="currentUser"
+            app:argType="com.surajmyt.navigationcomponentandroid.model.User" />
     </fragment>
 </navigation>
