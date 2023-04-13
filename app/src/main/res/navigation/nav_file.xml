@@ -8,24 +8,19 @@
     <fragment
         android:id="@+id/fragmentOne"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentOne"
-        android:label="fragment_one"
+        android:label="Home Fragment"
         tools:layout="@layout/fragment_one">
         <action
-            android:id="@+id/navigateToFragTwo"
-            app:destination="@id/fragmentTwo"
-            app:enterAnim="@android:anim/slide_in_left" />
+            android:id="@+id/action_FirstFrag_to_bottomSheetFrag"
+            app:destination="@id/fragmentTwo"/>
     </fragment>
-    <fragment
+    <dialog
         android:id="@+id/fragmentTwo"
         android:name="com.surajmyt.navigationcomponentandroid.FragmentTwo"
-        android:label="fragment_two"
+        android:label="Bottom Sheet"
         tools:layout="@layout/fragment_two">
         <action
-            android:id="@+id/navigateToFragOne"
-            app:destination="@+id/fragmentOne"
-            app:enterAnim="@android:anim/slide_out_right" />
-        <argument
-            android:name="currentUser"
-            app:argType="com.surajmyt.navigationcomponentandroid.model.User" />
-    </fragment>
+            android:id="@+id/action_bottomSheetFrag_to_FirstFrag"
+            app:destination="@+id/fragmentOne" />
+    </dialog>
 </navigation>

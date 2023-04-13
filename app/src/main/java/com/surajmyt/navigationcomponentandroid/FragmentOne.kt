@@ -22,15 +22,10 @@ class FragmentOne : Fragment() {
         // Inflate the layout for this fragment
         val view = inflater.inflate(R.layout.fragment_one, container, false)
 
-        val sendBtn = view.findViewById<Button>(R.id.frag1_send_btn)
+        val btn = view.findViewById<Button>(R.id.bottom_sheet_btn)
 
-        sendBtn.setOnClickListener {
-            val firstName = view.findViewById<EditText>(R.id.firstName).text.toString()
-            val lastName = view.findViewById<EditText>(R.id.lastName).text.toString()
-
-            val user = User(firstName, lastName)
-            val action = FragmentOneDirections.navigateToFragTwo(user)
-            findNavController().navigate(action)
+        btn.setOnClickListener {
+            findNavController().navigate(R.id.action_FirstFrag_to_bottomSheetFrag)
         }
 
         return view
